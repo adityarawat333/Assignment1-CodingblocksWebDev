@@ -5,229 +5,296 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /*.backgroundpic{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .backgroundpic::before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(snowmountains.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.4;
+
+        }*/
+        .navbar{
+            margin-top: 20px;
+        }
         .content{
+            margin-left: 5px;
             padding-left: 40px;
             padding-right: 40px;
             padding-top: 5px;
             padding-bottom: 5px;
             text-align: center;
-            border: 1px solid;
+            border: 3px solid;
+            border-radius: 20px;
             background: linear-gradient(to right, #f1f2b5, #135058);
+            border-color: black;
+            text-decoration: none;
+            color: none;
         }
         .tableforms{
-            padding: 10px;
+            /*padding: 5px;*/
             border: 1px solid;
+            
         }
         .table2,th,tr,td{
-            height: 30px;
+            height: 40px;
             width: 200px;
             text-align: center;
-            border: 1px solid black;
+            border: 1px azure;
         }
         .trycolor{
             background: linear-gradient(to right, rgb(31,162,255,0.5), rgb(18,216,250,0.5), rgb(166,255,203,0.5));
         }
+        #form{
+            display: inline-block;
+            background-image: url(mountains.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: azure;
+
+        }
+        input::placeholder{
+            padding: 20px;
+            outline: black;
+            color: aquamarine;
+            border-radius: 10px;
+            text-align: center;
+        }
+        /*.backgroundpic{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .backgroundpic::before{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(snowmountains.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.4;
+        }*/
+
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <span class="content">
-            Contact : <a href="">+91 7011438198</a>
-        </span>
-        <span class="content">
-            About : Web Dev assignment 1
-        </span>
-        <span class="content">
-            Projects : It is my first project 
-        </span>
-        <span class="content">
-            Skills : Java , Sql , HTML
-        </span>
-        <span class="content">
-            Social media : <a href="https://www.instagram.com/aditya.rawat333/">Instagram</a>
-        </span>
-    </div><br> <br>
-    <form>
-        <table class="tableforms">
-            <tr>
-                <td>
-                    <label for="name">Name</label>
-                </td>
-                <td>
-                    <input type="text" id="name" placeholder="Enter Your Name" required oninvalid="this.setCustomValidity('Please Enter Your Name')">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="sem">Semester</label>
-                </td>
-                <td>
-                    <input type="text" id="sem" placeholder="Enter Your Semester" required oninvalid="this.setCustomValidity('Please Enter Your Semester')">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="email">e-Mail</label>
-                </td>
-                <td>
-                    <input type="email" id="email" placeholder="Enter Your e-Mail">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="DOB">Date Of Birth</label>
-                </td>
-                <td>
-                    <input type="date" id="DOB">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Gender</label>
-                </td>
-                <td>
-                    <select>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Others</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="feedback">Feedback</label>
-                </td>
-                <td>
-                    <textarea name="feedback" cols="30" rows="5"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Profession</label><br>
-                </td>
-                <td>
-                    <input type="radio" name="Profession"/>
-                    <label>Student</label>
-                    <input type="radio" name="Profession"/>
-                    <label>Professor</label>
-                    <input type="radio" name="Profession"/>
-                    <label>Engineer</label>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>Feedback Of Form</label>
-                </td>
-                <td>
-                    <label>Great</label>
-                    <input type="range" name="feedback">
-                    <label>Bad</label>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" name="submit">
-                </td>
-            </tr>
-            <tr>
+    <div class="backgroundpic">
+        <div class="navbar">
+            <a href="#form" class="content">
+                Form
+            <a>
+            <a href="#locationandvedio" class="content">
+                Location
+            <a>
+            <a href="#aboutme" class="content">
+                About Me
+            </a>
+            <a href="#Skills"class="content">
+                My Proffesional Skills
+            </a>
+            <a href="https://www.instagram.com/aditya.rawat333/" class="content">
+                Social media 
+            </a>
+        </div><br> <br>
+        <form id="form">
+            <table class="tableforms">
+                <tr>
+                    <td>
+                        <label for="name">Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" placeholder="Enter Your Name" required oninvalid="this.setCustomValidity('Please Enter Your Name')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sem">Semester</label>
+                    </td>
+                    <td>
+                        <input type="text" id="sem" placeholder="Enter Your Semester" required oninvalid="this.setCustomValidity('Please Enter Your Semester')">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">e-Mail</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" placeholder="Enter Your e-Mail">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="DOB">Date Of Birth</label>
+                    </td>
+                    <td>
+                        <input type="date" id="DOB">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender</label>
+                    </td>
+                    <td>
+                        <select>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="feedback">Feedback</label>
+                    </td>
+                    <td>
+                        <textarea name="feedback" cols="30" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Profession</label><br>
+                    </td>
+                    <td>
+                        <input type="radio" name="Profession"/>
+                        <label>Student</label>
+                        <input type="radio" name="Profession"/>
+                        <label>Professor</label>
+                        <input type="radio" name="Profession"/>
+                        <label>Engineer</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Feedback Of Form</label>
+                    </td>
+                    <td>
+                        <label>Great</label>
+                        <input type="range" name="feedback">
+                        <label>Bad</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" name="submit">
+                    </td>
+                </tr>
+                <tr>
 
+                </tr>
+            </table>
+        </form><br><br>
+
+        <table class="trycolor" id="Skills">
+            <h1 style="margin-top: 15px; margin-bottom: 10px;">My Skillset</h1>
+            <tr>
+                
+                <th>Skill Name</th>
+                <th>Proficiency</th>
+                <th>Experience</th>
+                
             </tr>
-        </table>
-    </form><br><br>
+            <tr>
+                <td>
+                    Java
+                </td>
+                <td>
+                    Intermediate
+                </td>
+                <td>
+                    2 Years
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sql
+                </td>
+                <td>
+                    Intermediate
+                </td>
+                <td>
+                    1 Year
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Html
+                </td>
+                <td>
+                    Begginer
+                </td>
+                <td>
+                    1 Month
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    CSS
+                </td>
+                <td>
+                    Begginer
+                </td>
+                <td>
+                    1 Month
+                </td>
+            </tr>
+        </table><br> <br>
 
-    <table class="trycolor">
-        <tr>
-            
-            <th>Skill Name</th>
-            <th>Proficiency</th>
-            <th>Experience</th>
-            
-        </tr>
-        <tr>
-            <td>
-                Java
-            </td>
-            <td>
-                Intermediate
-            </td>
-            <td>
-                2 Years
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Sql
-            </td>
-            <td>
-                Intermediate
-            </td>
-            <td>
-                1 Year
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Html
-            </td>
-            <td>
-                Begginer
-            </td>
-            <td>
-                1 Month
-            </td>
-        </tr>
-        <tr>
-            <td>
-                CSS
-            </td>
-            <td>
-                Begginer
-            </td>
-            <td>
-                1 Month
-            </td>
-        </tr>
-    </table><br> <br>
+        <div id="locationandvedio">
+            <h1>Lcation and YouTube Video</h1>
+            <span>
+                <iframe style="margin-left:250px; margin-right:50px; border:10px solid black;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9572317812303!2d77.11437127533553!3d28.63104387566561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0353faff6d41%3A0xd3090f1960f6e18!2sGuru%20Tegh%20Bahadur%204th%20Centenary%20Engineering%20College!5e0!3m2!1sen!2sin!4v1735757716162!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </span>
+            <span><iframe width="300" height="300" style="border: 10px solid black;" src="https://www.youtube.com/embed/cc8heIkPqrM?si=wp53uLIyRsP6M_Xz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
+        </div><br> <br>
 
-    <div>
-        <h1>Lcation and YouTube Video</h1>
-        <span>
-            <iframe style="margin-left:250px; margin-right:50px; border:10px solid black;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9572317812303!2d77.11437127533553!3d28.63104387566561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0353faff6d41%3A0xd3090f1960f6e18!2sGuru%20Tegh%20Bahadur%204th%20Centenary%20Engineering%20College!5e0!3m2!1sen!2sin!4v1735757716162!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </span>
-        <span><iframe width="300" height="300" style="border: 10px solid black;" src="https://www.youtube.com/embed/cc8heIkPqrM?si=wp53uLIyRsP6M_Xz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
-    </div><br> <br>
-
-    <span class="Aboutme">
-        <h1>About me</h1><br>
-        <ul>
-        <li><h2>My Schooling</h2></li>
-        <p1>I have done my 10th and 12th from Kendriya Vidhyalaya No.3 , Makarpura , Vadodara</p1>
-        <li><h2>My Current Academic Status</h2></li>
-        <p1>Currently i am pursuinig B.Tech in CSE from Guru Tegh Bahadur 4th Centenary College under aegis of IPU</p1><br>
-        <li><h2>My Skills</h2></li>
-        <p1>Currently i am working on improve my leetcode profile in java also i want to be a good professional free lancer in Web development</p1>
-        </ul>
-    </span><br><br>
-
-    <span class="Hobbies">
-        <h1>My Hobbies</h1>
-        <ol>
-            <li>I personally love playing spots and exercises like :-</li><br>
+        <span class="Aboutme" id="aboutme">
+            <h1>About me</h1><br>
             <ul>
-                <li>Playing Basketball</li>
-                <li>Running</li>
-                <li>Doing exercises</li>
-                <li>Playing Badmnton</li>
+            <li><h2>My Schooling</h2></li>
+            <p1>I have done my 10th and 12th from Kendriya Vidhyalaya No.3 , Makarpura , Vadodara</p1>
+            <li><h2>My Current Academic Status</h2></li>
+            <p1>Currently i am pursuinig B.Tech in CSE from Guru Tegh Bahadur 4th Centenary College under aegis of IPU</p1><br>
+            <li><h2>My Skills</h2></li>
+            <p1>Currently i am working on improve my leetcode profile in java also i want to be a good professional free lancer in Web development</p1>
             </ul>
-            <li>I love learing new skills like :-</li><br>
-            <ul>
-                <li>learning new technologies like java and web development</li>
-                <li>Reading books</li>
-            </ul><br>
-            <li>I love to Listen to people and Observe the things around me</li>
-        </ol>
-    </span>
+        </span><br><br>
 
+        <span class="Hobbies">
+            <h1>My Hobbies</h1>
+            <ol>
+                <li>I personally love playing spots and exercises like :-</li><br>
+                <ul>
+                    <li>Playing Basketball</li>
+                    <li>Running</li>
+                    <li>Doing exercises</li>
+                    <li>Playing Badmnton</li>
+                </ul>
+                <li>I love learing new skills like :-</li><br>
+                <ul>
+                    <li>learning new technologies like java and web development</li>
+                    <li>Reading books</li>
+                </ul><br>
+                <li>I love to Listen to people and Observe the things around me</li>
+            </ol>
+        </span>
+    </div>
 
 </body>
 </html>
